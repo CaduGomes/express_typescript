@@ -1,11 +1,11 @@
 import { Request, Response, NextFunction } from "express";
 
-export const homepage = (req: Request, res: Response, next: NextFunction) => {
+export const homepage = (req: Request, res: Response) => {
   const nhaw = {
     salve: "yodinha",
   };
 
-  res.json(nhaw);
+  return res.json(nhaw);
 };
 
 export const teste = (req: Request, res: Response, next: NextFunction) => {
