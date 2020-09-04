@@ -1,10 +1,18 @@
 import app from "./config/server";
-import userRoute from "./routes/user";
-import authRoute from "./routes/auth";
+import mongoose from "mongoose";
 
-app.use(userRoute);
-app.use(authRoute);
-
-app.listen(3333, () => {
-  console.log("Server iniciando");
-});
+mongoose
+  .connect("mongodb://localhost:27017/TrelloClone", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+  })
+  .then(() => {
+    app.listen(3333, () => {
+      console.log("Server iniciando");
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });

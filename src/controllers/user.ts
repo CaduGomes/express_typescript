@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 
-export const homepage = (req: Request, res: Response) => {
+export const homepage = async (req: Request, res: Response) => {
   const nhaw = {
     salve: "yodinha",
   };
