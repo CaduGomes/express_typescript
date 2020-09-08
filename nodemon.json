@@ -1,5 +1,7 @@
 {
   "env": {
-    "SECRET": "projeto trello clone typescript"
+    "ACCESS_TOKEN_SECRET": "projeto trello clone typescript access token",
+    "REFRESH_TOKEN_SECRET": "projeto trello clone typescript refresh token",
+    "DB_URL": "projeto trello clone typescript refresh token"
   }
 }

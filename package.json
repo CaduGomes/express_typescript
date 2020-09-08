@@ -4,9 +4,8 @@
   "description": "",
   "main": "./src/index.ts",
   "scripts": {
-    "start": "nodemon",
-    "build": "tsc",
-    "test": "jest"
+    "dev": "nodemon",
+    "build": "tsc"
   },
   "author": "Cadu Gomes",
   "license": "ISC",
@@ -38,14 +37,10 @@
     "@babel/core": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-typescript": "^7.10.4",
-    "@types/jest": "^26.0.13",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/mongoose": "^5.7.36",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
-    "babel-jest": "^26.3.0",
-    "jest": "^26.4.2",
-    "sqlite3": "^5.0.0",
-    "supertest": "^4.0.2"
+    "sqlite3": "^5.0.0"
   }
 }
