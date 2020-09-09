@@ -3,18 +3,8 @@ import User from "../model/user";
 import IRes from "../interfaces/response";
 import bcrypt from "bcrypt";
 import IError from "../interfaces/error";
-import jwt from "jsonwebtoken";
 import IUser from "../interfaces/user";
-
-const generateAccessToken = (userId: string) => {
-  return jwt.sign({ userId }, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: "3m",
-  });
-};
-
-const generateRefreshToken = (userId: string) => {
-  return jwt.sign({ userId }, process.env.REFRESH_TOKEN_SECRET);
-};
+import { generateAccessToken, generateRefreshToken } from "../utils/token";
 
 export const register = async (
   req: Request,
@@ -30,7 +20,6 @@ export const register = async (
       email,
       name,
       password_hash,
-      refresh_token: "no login",
     });
 
     return res

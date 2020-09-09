@@ -1,5 +1,5 @@
 export default interface IRes {
   data?: object;
-  msg: string;
+  msg?: string;
   token?: string;
 }
